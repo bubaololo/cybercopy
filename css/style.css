@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Roboto:wght@300;400;500&display=swap');
+
+/* font-family: 'Inter', sans-serif;
+
+font-family: 'Roboto', sans-serif;
+
+Inter: 400, 800
+
+roboto 300, 400, 500 */
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1880px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    color: #0F111A;
+}
+
+.header__content-inner {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo__link {
+    margin: 13px -30px;
+}
+
+.logo {
+    position: relative;
+    transform: scale(.7);
+}
+
+.logo::before {
+    position: absolute;
+    content: url(../img/logo__top.svg);
+    left: -1px;
+    top: 5px;
+    animation-name: logo;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logo {
+    0% {
+        top: 5px;
+    }
+    100% {
+        top: -6px;
+    }
+}
+
+.top__slogan {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    color: #3A323A;
+    letter-spacing: -1.5px;
+    line-height: 2.7rem;
+    margin: 30px auto 30px 5vw;
+}
+
+.top__slogan h1 {
+    min-width: 290px;
+}
+
+.illustration__wrapper {
+    margin: 63px 20px 22px -260px;
+}
+
+#constructing {
+    width: 250px;
+}
+
+.top__title h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: -0.9px;
+}
+
+.top__text {
+    max-width: 480px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    letter-spacing: -0.9px;
+    line-height: 2.3rem;
+}
+
+.price__calc {
+    z-index: 1000;
+    position: fixed;
+    display: inline-block;
+    width: auto;
+    height: 45px;
+    border-radius: 10px;
+    background-color: #0F111A;
+    padding: 15px;
+    right: 30px;
+    bottom: 30px;
+}
+
+.price {
+    font-size: 18px;
+    color: aliceblue;
+    line-height: 14px;
+}
+
+#result {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1AA7EC;
+}
+
+.calc__button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: -1px;
+    display: inline-block;
+    min-width: 140px;
+    white-space: nowrap;
+    height: 30px;
+    border: 2px solid #1AA7EC;
+    border-radius: 30px;
+    padding: 15px;
+    color: #0F111A;
+    font-size: 16px;
+    line-height: 0px;
+    margin: 15px 20% 20px 45%;
+}
+
+.form__box-inner label {
+    font-weight: 700;
+}
+
+.form {
+    padding-top: 30px;
+}
+
+.form__inner {
+    padding-bottom: 40px;
+    background-image: url(../img/form-fon.png);
+    min-height: 460px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.form__box {
+    max-width: 850px;
+    padding-top: 45px;
+}
+
+.form__box-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__box-left {
+    max-width: 260px;
+    width: 100%;
+}
+
+.form__box-left label {
+    color: blueviolet;
+}
+
+.form__box-right {
+    max-width: 555px;
+    width: 100%;
+}
+
+.form__box-inner label,
+.form__box-inner input,
+.form__box-inner textarea {
+    display: block;
+    width: 100%;
+}
+
+.form__box-inner label {
+    line-height: 36px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #282828;
+}
+
+.form__box-inner input {
+    margin-bottom: 8px;
+    outline: none;
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    padding: 0 10px;
+}
+
+.form__box-inner select {
+    outline: none;
+    padding-left: 17px;
+}
+
+.form__box-inner .jq-selectbox.jqselect {
+    display: block;
+    width: 100%;
+}
+
+.form__box-inner .jq-selectbox__select {
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    padding-left: 17px;
+}
+
+.form__box-inner .jq-selectbox__trigger-arrow::before {
+    content: "\f105";
+    font-family: 'icomoon';
+    position: absolute;
+    right: 17px;
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.form__box-inner .jq-selectbox__dropdown {
+    width: 100%;
+    margin: 2px 0 0;
+    padding: 0;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+    background: #fff;
+}
+
+.form__box-inner .jq-selectbox li {
+    min-height: 18px;
+    padding: 5px 17px 6px;
+    color: #231F20;
+}
+
+.form__box-inner .jq-selectbox li.selected {
+    background-color: #A3ABB1;
+    color: #FFF;
+}
+
+.form__box-inner .jq-selectbox li:hover {
+    background-color: #08C;
+    color: #FFF;
+}
+
+.form__box-inner .jq-selectbox li.disabled {
+    color: #AAA;
+}
+
+.form__box-inner .jq-selectbox li.disabled:hover {
+    background: none;
+}
+
+.form__box-inner .jq-selectbox li.optgroup {
+    font-weight: bold;
+}
+
+.form__box-inner .jq-selectbox li.optgroup:hover {
+    background: none;
+    color: #231F20;
+    cursor: default;
+}
+
+.form__box-inner .jq-selectbox li.option {
+    padding-left: 25px;
+}
+
+.form__box-inner textarea {
+    outline: none;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    height: 208px;
+    resize: none;
+    margin-bottom: 40px;
+}
+
+.form__box-inner button {
+    background-color: transparent;
+    color: #282828;
+    float: right;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="form">
+        <div class="container">
+            <div class="form__box-inner">
+                <div class="form__box-left">
+                    <label><b>Тип</b><select id="type" onchange="calc()">
+
+                                        <option value="50">круглая печать</option>
+                                          <option value="65">овальная печать</option>
+                                        <option value="65">треугольный штамп</option>
+                                        <option value="50">прямоугольный штамп</option>
+                                        <option value="50">факсимиле</option>
+                                        <option value="90">факсимиле с учетом толщины линий</option>
+                                
+                                    </select></label>
+                    <div class="seal__options">
+                        <label class="round__strings">Количество строк по кругу<select onchange="calc()" id="spk">
+
+                        <option value="0">1</option>
+                        <option value="15">2</option>
+                        <option value="30">3</option>
+                         <option value="45">4</option>
+                        <option value="60">5</option>
+                        <option value="75">6</option>
+                
+                
+                    </select></label>
+                        <label>Количество строк в центре<select onchange="calc()" id="svc">
+
+                        <option value="0">не более 3-х</option>
+                        <option value="15">от 4-х до 8-и</option>
+                        <option value="30">от 9-и до 15-и</option>
+                        <option value="60">16 и более</option>
+                
+                
+                    </select></label>
+                        <label>Количество шрифтов<select onchange="calc()" id="fonts">
+
+                        <option value="0">до 3-х</option>
+                        <option value="15">четыре</option>
+                        <option value="30">пять</option>
+                        <option value="60">шесть и более</option>
+                        <option value="0">нет</option>
+                
+                    </select></label>
+                        <label>Язык<select onchange="calc()" id="lang">
+
+                        <option value="1">русский</option>
+                        <option value="1.5">иностранный</option>
+                        <option value="1.3">смешанный</option>
+                        <option value="1">нет</option>
+                
+                    </select></label>
+                        <label>Алфавит<select onchange="calc()" id="alph">
+
+                        <option value="1">кириллица</option>
+                        <option value="1.5">кириллица с доп. элементами</option>
+                        <option value="1.5">латинский</option>
+                        <option value="1.5">латинский с доп. элементами</option>
+                        <option value="3.5">арабский</option>        
+                        <option value="3.5">иврит</option>        
+                        <option value="3.5">грузинский, армянский</option>        
+                        <option value="3.5">иероглифы</option>        
+                        <option value="1">нет</option>
+                
+                    </select></label>
+                        <label>Тип шрифтов<select onchange="calc()" id="t_fonts">
+
+                        <option value="1">стандартные</option>
+                        <option value="1.5">советские</option>
+                        <option value="1.5">наборные</option>		
+                        <option value="4">ручные</option>
+                        <option value="4">матричные</option>
+                        <option value="1">нет</option>
+                
+                    </select></label>
+                        <label>Графика<select onchange="calc()" id="graph">
+
+                        <option value="0">нет</option>
+                        <option value="15">фигура</option>
+                        <option value="35">герб</option>
+                        <option value="100">логотип/эмблема/рисунок</option>
+                        <option value="50">логотип/эмблема/рисунок (прост.)</option>
+                        <option value="200">логотип/эмблема/рисунок (сложн.)</option>
+                
+                    </select></label>
+                        <label class="border">Окантовка<select onchange="calc()" id="bord">
+
+                        <option value="0">нет</option>
+                        <option value="15">один круг</option>
+                        <option value="30">два круга</option>
+                        <option value="45">три круга</option>
+                        <option value="60">четыре круга</option>
+                
+                    </select></label>
+                        <label>Фон<select onchange="calc()" id="bg">
+
+                        <option value="0">нет</option>
+                        <option value="50">сетка</option>
+                        <option value="100">орнамент</option>
+                        <option value="200">гильош</option>
+                
+                    </select></label>
+                        <label>Микротекст<select onchange="calc()" id="mtext">
+
+                        <option value="0">нет</option>
+                        <option value="15">одно кольцо</option>
+                        <option value="30">два кольца</option>
+                
+                    </select></label>
+                        <label>Защита<select onchange="calc()" id="prot">
+
+                        <option value="0">нет</option>
+                        <option value="15">есть</option>
+                
+                    </select></label></div>
+                    <label>Срок исполнения<select onchange="calc()" id="srok">
+
+                        <option value="1">обычный режим</option>
+                        <option value="1.5">срочный режим</option>
+                        <option value="2">очень срочный режим</option>
+                        <option value="1.25">выходные и праздничные дни</option>
+                
+                    </select></label>
+                    </form>
+                </div>
+    </section>
+
+    <div class="price__calc">
+        <span class="price">Стоимость: <span id="result">70</span> руб.</span>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
